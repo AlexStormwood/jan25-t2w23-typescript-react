@@ -4,6 +4,8 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import type { UserAuth } from './utils/types/UserAuth'
+import { ExamplePreviewCard } from './components/ExamplePreviewCard'
+import { PreviewCardContainer } from './components/PreviewCardContainer'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +18,11 @@ function App() {
         <div className="hero">
           {userAuth.id ?? <h2>User ID is: {userAuth.id}</h2>}
           {userAuth.jwt ?? <h2>User JWT is: {userAuth.jwt}</h2>}
+          <PreviewCardContainer>
+            <ExamplePreviewCard title='Example Card Here' description='Example preview here blah blah blah' />
+            <ExamplePreviewCard title='Example Card Here' description='Example preview here blah blah blah' />
+            <ExamplePreviewCard title='Example Card Here' description='Example preview here blah blah blah' />
+          </PreviewCardContainer>
         </div>
         <div>
           <h1>Get started</h1>
