@@ -6,6 +6,7 @@ import './App.css'
 import type { UserAuth } from './utils/types/UserAuth'
 import { ExamplePreviewCard } from './components/ExamplePreviewCard'
 import { PreviewCardContainer } from './components/PreviewCardContainer'
+import { PokemonDataCard } from './components/PokemonDataCard'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
     <>
       <section id="center">
         <div className="hero">
+          <PokemonDataCard />
           {userAuth.id ?? <h2>User ID is: {userAuth.id}</h2>}
           {userAuth.jwt ?? <h2>User JWT is: {userAuth.jwt}</h2>}
           <PreviewCardContainer>

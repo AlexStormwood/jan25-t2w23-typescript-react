@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import { PokemonDataProvider } from './providers/PokemonDataProvider.tsx'
 
 
 // type Fruit = {
@@ -22,6 +23,9 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <PokemonDataProvider>
+      <App />
+    </PokemonDataProvider>
+    
   </StrictMode>,
 )
