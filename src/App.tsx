@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import type { UserAuth } from './utils/types/UserAuth'
 import { ExamplePreviewCard } from './components/ExamplePreviewCard'
@@ -11,7 +10,7 @@ import { PokemonDataCard } from './components/PokemonDataCard'
 function App() {
   const [count, setCount] = useState(0);
 
-  const [userAuth, setUserAuth] = useState<Partial<UserAuth>>({});
+  const [userAuth] = useState<Partial<UserAuth>>({});
 
   return (
     <>
